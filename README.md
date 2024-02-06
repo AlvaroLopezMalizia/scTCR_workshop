@@ -10,17 +10,25 @@ At the top-right corner of the script windows, adjacent to the "Source" dropdown
 
 ## 01) Script Setup 🛠️
 
-Working Directory Setup: The script automatically sets the working directory to the location of the script file using the setwd function. If needed, the directory can be manually set.
+### Working Directory Setup
+The script automatically sets the working directory to the location of the script file using the setwd function. If needed, the directory can be manually set.
 
-Libraries: Several libraries are loaded, including Seurat, dplyr, tidyr, clustree, patchwork, ggplot2, DescTools, divo, ggrepel, scGate, stringdist, and pheatmap, each serving various purposes in data analysis and visualization.
+### Libraries
+Several libraries are loaded, including Seurat, dplyr, tidyr, clustree, patchwork, ggplot2, DescTools, divo, ggrepel, scGate, stringdist, and pheatmap, each serving various purposes in data analysis and visualization.
 
-Random Number Generator Seed: The seed for the random number generator is set to ensure reproducibility of results.
+### Random Number Generator Seed
+The seed for the random number generator is set to ensure reproducibility of results.
 
 ## 02) Load Data 📊
-RNAseq Data Loading: RNAseq counts, cell names, and gene names are loaded from cellranger output using the Read10X function from Seurat package.
 
-TCR Data Loading: TCR data is loaded from a CSV file. Only full-length and productive contigs with TRA or TRB chains are selected for further analysis.
+### RNAseq Data Loading
+RNAseq counts, cell names, and gene names are loaded from cellranger output using the Read10X function from Seurat package.
 
-Processing TCR Data: TCR data is processed to include V gene information in strings along with sequence information. Clonotypes are defined based on this information. Droplets containing multiple TCR chains are identified as doublets.
+### TCR Data Loading
+TCR data is loaded from a CSV file. Only full-length and productive contigs with TRA or TRB chains are selected for further analysis.
 
-Merge TCR Data with Seurat Object: TCR data is merged with the Seurat object, ensuring compatibility and preventing mixing of TCR information between samples with repeated barcodes.
+### Processing TCR Data
+TCR data is processed to include V gene information in strings along with sequence information. Clonotypes are defined based on this information. Droplets containing multiple TCR chains are identified as doublets.
+
+### Merge TCR Data with Seurat Object
+TCR data is merged with the Seurat object, ensuring compatibility and preventing mixing of TCR information between samples with repeated barcodes.
