@@ -8,7 +8,7 @@ This script is designed solely for educational purposes. It does not provide an 
 
 At the top-right corner of the script windows, adjacent to the "Source" dropdown menu, you will find the outline button. Clicking it will reveal a clickable index to various parts of the script. It's recommended to organize scripts into sections and subsections using hashtags. For example, a section can be created with a single hashtag, and subsections can be nested with additional hashtags.
 
-## Script Setup 🛠️
+## 01) Script Setup 🛠️
 
 Working Directory Setup: The script automatically sets the working directory to the location of the script file using the setwd function. If needed, the directory can be manually set.
 
@@ -16,7 +16,7 @@ Libraries: Several libraries are loaded, including Seurat, dplyr, tidyr, clustre
 
 Random Number Generator Seed: The seed for the random number generator is set to ensure reproducibility of results.
 
-02) Load Data 📊
+## 02) Load Data 📊
 RNAseq Data Loading: RNAseq counts, cell names, and gene names are loaded from cellranger output using the Read10X function from Seurat package.
 
 TCR Data Loading: TCR data is loaded from a CSV file. Only full-length and productive contigs with TRA or TRB chains are selected for further analysis.
